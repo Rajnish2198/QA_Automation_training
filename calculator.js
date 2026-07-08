@@ -6,4 +6,4 @@ function calculator(a, b) {
     console.log("Modulus:", a % b);
 }
 
-calculator(5, 10);
+calculator(5, 11);
