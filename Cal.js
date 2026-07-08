@@ -1,4 +1,4 @@
-console.log("Welcome to the Simple Calculator");
+console.log("Welcome to my Simple Calculator");
 
 function calculator(a, b, action) {
     if (action === "add"){
@@ -16,5 +16,5 @@ function calculator(a, b, action) {
     }
 }
 
-let output = calculator(20, 10, "div");
+let output = calculator(20, 10, "reminder");
 console.log("Your Output is " + output);
