@@ -14,6 +14,4 @@ function calculator(a, b) {
 
 }
 calculator(2, 5);
-console.log();
-console.log();
-calculator(10, 10);
+

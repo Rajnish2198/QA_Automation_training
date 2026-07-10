@@ -26,3 +26,4 @@ else {
 
 }
     
+console.log(typeof "a");
