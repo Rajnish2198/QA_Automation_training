@@ -14,6 +14,15 @@ async function launchBrowser() {
 
         console.log("Browser launched and navigated to the specified URL.");
 
+        await page.locator('#signIn').click();
+        console.log("Clicked on the sign-in button.");
+
+        await page.locator('.btn.btn-lg.btn-primary.btn-block').click();
+        console.log("Clicked on the submit button.");
+
+        await page.locator('filter-option pull-left').click();
+        console.log("Clicked on the Game name.");
+
         await closeBrowser(browser);
 
     } catch (error) {

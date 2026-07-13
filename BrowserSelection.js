@@ -16,3 +16,10 @@ switch (browserName) {
     default:
         console.log("Invalid browser name.");
 }
+
+//why break is used here 
+
+//Navigation of playwright using different browser
+
+//Pages what all does it have
+//multiple method of printing except console.log
