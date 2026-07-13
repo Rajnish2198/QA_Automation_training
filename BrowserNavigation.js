@@ -15,7 +15,7 @@ const rl =readline.createInterface({
 
 async function navigateTo(browsername)
 {
-let browser;
+ let browser;
 if(browsername == 'Chrome')
 {
     browser = await chromium.launch({headless:false})
@@ -38,6 +38,8 @@ const page = await browser.newPage();
 await page.goto("https://emulator.owbetguard.com/")
 
 console.log(`${browsername} launch successfully`)
+
+ browser.close();    
 }
 
 //Taking input from user
@@ -46,8 +48,8 @@ rl.question(
     async function(browsername){
         await navigateTo(browsername);
         //wait for some time before closing the browser
-        await Page.waitForTimeout(5000);
-        browser.close();
-        console.log(`${browsername} launched successfully`)
+        //await Page.waitForTimeout(5000);
+        console.log(`${browsername} closed successfully`)
+          
     }
 );
