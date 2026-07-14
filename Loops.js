@@ -36,8 +36,3 @@ for(let l in fruits){
 }
 
 console.log("\nEnd of the Program")
-
-
-// Task 4 - Using "for . . .of"
-// Print only the fruit names.
-// Task 5 - Using "for . . .in"
