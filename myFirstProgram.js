@@ -1,1 +1,12 @@
-console.log("hello");
+const myarray =["yellow","orange","Red"];
+//myarray.pop();
+//myarray.push("Green");
+//let s = myarray.toString();
+//console.log(s);
+//let size = myarray.length;
+//console.log(size);
+//let color = myarray.at(1);
+//myarray.shift();
+//myarray.unshift("pink");
+myarray[myarray.length]="Purple";
+console.log(myarray);
