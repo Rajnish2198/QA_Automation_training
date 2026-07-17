@@ -20,8 +20,8 @@ async function launchBrowser() {
         await page.locator('.btn.btn-lg.btn-primary.btn-block').click();
         console.log("Clicked on the submit button.");
 
-        await page.locator('filter-option pull-left').click();
-        console.log("Clicked on the Game name.");
+       //await page.locator('filter-option pull-left').click();
+        //console.log("Clicked on the Game name.");
 
         await closeBrowser(browser);
 
