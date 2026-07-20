@@ -1,4 +1,4 @@
-// // 1. Create an example of Synchronous Execution.
+// // 1. Create an example of Synchronous Execution
 // function task1() {
 //     console.log("Game loading started");
 // }
