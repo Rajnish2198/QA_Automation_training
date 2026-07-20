@@ -40,4 +40,4 @@ console.log(typeof(NewArr));
 console.log("A ", MyArray);
 
 const Myn1 = MyArray.slice(1,3)
-console.log(Myn1)
+console.log(Myn)

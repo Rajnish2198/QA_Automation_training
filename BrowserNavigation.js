@@ -50,6 +50,7 @@ rl.question(
         //wait for some time before closing the browser
         //await Page.waitForTimeout(5000);
         console.log(`${browsername} closed successfully`)
+
           
     }
 );
