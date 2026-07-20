@@ -1,19 +1,19 @@
 // // 1. Create an example of Synchronous Execution
-// function task1() {
-//     console.log("Game loading started");
-// }
+function task1() {
+    console.log("Game loading started");
+}
 
-// function task2() {
-//     console.log("Post-loading screen is displayed");
-// }
+function task2() {
+    console.log("Post-loading screen is displayed");
+}
 
-// function task3() {
-//     console.log("Game launched successfully");
-// }
+function task3() {
+    console.log("Game launched successfully");
+}
 
-// task1();
-// task2();
-// task3();
+task1();
+task2();
+task3();
  
 // 2. Create an example of Asynchronous Execution using "setTimeout()".
 function step1() {
