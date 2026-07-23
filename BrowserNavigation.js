@@ -13,7 +13,7 @@ const rl =readline.createInterface({
 }
 )
 
-async function navigateTo(browsername)
+export async function navigateTo(browsername)
 {
  let browser;
 if(browsername == 'Chrome')

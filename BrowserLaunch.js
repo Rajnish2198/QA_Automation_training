@@ -1,6 +1,6 @@
 const { chromium } = require('playwright');
 
-async function launchBrowser() {
+export async function launchBrowser() {
     let browser;
 
     try {
