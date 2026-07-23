@@ -36,19 +36,3 @@ login(
 
 login(()=>{console.log("I am being called after login function");
 })
-
-
-
-
-
-
-
-// function greet(name) {
-//     console.log("Hello " + name);
-// }
-
-// function processUser(callback) {
-//     callback("Raj");
-// }
-
-// processUser(greet);
