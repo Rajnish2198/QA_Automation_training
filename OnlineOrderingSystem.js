@@ -10,6 +10,7 @@
 // inheritance
 // abstract
 // ==========================================
+// Online Ordering Process
 class Order {
     // Public
     customerName;
@@ -95,11 +96,3 @@ order1.payment();
 order1.dispatchOrder();
 // Static
 Order.displayTotalOrders();
-// ===============================
-// Not Accessible
-// ===============================
-// order1.calculateGST();      // ❌ Private
-// order1.updateStatus();      // ❌ Protected
-// order1.orderAmount;         // ❌ Private
-// order1.orderStatus;         // ❌ Protected
-// order1.orderId = 500;       // ❌ Readonly
