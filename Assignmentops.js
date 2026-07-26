@@ -1,0 +1,14 @@
+let x = 10;
+console.log("assigned value: ", x);
+x+=5;
+console.log("value added: ", x);
+x-=2;
+console.log("value subtracted: ", x);
+x*=4;
+console.log("value multiplied: ", x);
+x/=2;
+console.log("value divided: ", x);
+x%=6;
+console.log("value mod: ", x);
+x**=2;
+console.log("value square: ", x);
