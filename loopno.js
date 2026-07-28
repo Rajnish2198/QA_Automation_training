@@ -22,13 +22,26 @@ for (let i=1;i<=10;i++)
 }
 
 console.log("\nprint the sum of numbers from 1 to 10");
-function sum(){
-let sum=1;
-for (let i=1;i<=2;i++)
-     {
- console.log(`sum=${sum} i=${i} `);
-    console.log(`${sum=sum+(i+1)} `);
-}
-}
 
-sum()
+let sum=0;
+for (let i=1;i<=10;i++) {
+ sum += i;
+}
+console.log(`Sum = ${sum}`);
+
+console.log("\nprint the factorial of numbers from 1 to 5");
+let a=1;
+for (let i=1;i<=5;i++) {
+ a *= i;
+}
+console.log(`Factorial = ${a}`);
+
+
+console.log("\nNested Loop");
+for (row=1;row<=5;row++) {
+    let pattern ="";
+    for (let star=1;star<=row;star++) {
+        pattern += "*";
+    }
+    console.log(pattern);
+}
