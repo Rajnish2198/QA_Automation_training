@@ -1,69 +1,62 @@
 "use strict";
-
-/*
-===========================================
-Assignment 2 : Asynchronous Execution
-
-Scenario:
-Fetch Order Details from Server
-
-Concepts:
-✔ async
-✔ await
-✔ Promise
-✔ setTimeout()
-===========================================
-*/
-
-// Dummy API
-function fetchOrder() {
-
-    return new Promise((resolve) => {
-
-        console.log("Fetching Order From Server...\n");
-
-        setTimeout(() => {
-
-            resolve({
-                orderId: 101,
-                customer: "Rashmi",
-                amount: 2500
-            });
-
-        }, 3000);
-
-    });
-
-}
-
-// Apply Discount
-function applyDiscount(amount) {
-
-    if (amount >= 2000) {
-        return amount * 0.90;
+// Online Food Ordering System
+class Order {
+    orderId;
+    customer;
+    amount;
+    constructor(orderId, customer, amount) {
+        this.orderId = orderId;
+        this.customer = customer;
+        this.amount = amount;
     }
-
-    return amount;
-
 }
-
-// Main Function
+// Step 1
+function placeOrder() {
+    console.log("Placing Order...");
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(new Order(101, "Rashmi", 500));
+        }, 2000);
+    });
+}
+// Step 2
+function prepareFood(order) {
+    console.log("Preparing Food...");
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Food Prepared");
+            resolve(order);
+        }, 3000);
+    });
+}
+// Step 3
+function generateInvoice(order) {
+    console.log("Generating Invoice...");
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log(`Invoice Generated for Order ${order.orderId}`);
+            resolve();
+        }, 1500);
+    });
+}
+// Step 4
+function paymentFailed() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject(new Error("Payment Failed"));
+        }, 1000);
+    });
+}
+// Step 5
 async function processOrder() {
-
-    console.log("===== Order Processing Started =====\n");
-
-    const order = await fetchOrder();
-
-    console.log("Order Received");
-
-    console.table(order);
-
-    const finalAmount = applyDiscount(order.amount);
-
-    console.log(`Final Amount : ₹${finalAmount}`);
-
-    console.log("\n===== Order Processing Completed =====");
-
+    try {
+        const order = await placeOrder();
+        await prepareFood(order);
+        await generateInvoice(order);
+        console.log("Order Completed Successfully");
+    }
+    catch (error) {
+        console.log(error);
+    }
 }
-
 processOrder();
